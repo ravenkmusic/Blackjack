@@ -60,7 +60,13 @@ def value_of_ace(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    x = value_of_card(card_one)
+    y = value_of_card(card_two)
+
+    if x + y <= 10:
+        return 11
+    else:
+        return 1
 
 
 def is_blackjack(card_one, card_two):
