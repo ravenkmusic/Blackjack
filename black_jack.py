@@ -16,23 +16,15 @@ def value_of_card(card):
     3.  '2' - '10' = numerical value.
     """
 
-    faceCards = ['K', 'Q', 'J']
-    for cards in range(0, len(faceCards)):
-        if card == faceCards[card]:
-            faceCards[cards] = int('10')
-            return card
-        
     numCards = ['2', '3', '4', '5', '6', '7', '8', '9', '10']
-    for cards in range(0, len(numCards)):
-        if card == numCards[cards]:
-            numCards[cards] = int(numCards[cards])
-            return card
-        
-    aceCard = ['A']
-    for cards in range(0, len(aceCard)):
-        if card == aceCard[card]:
-            aceCard[cards] = int('1')
-            return card
+    faceCards = ['K', 'Q', 'J']
+
+    if card in faceCards:
+        return 10
+    if card == 'A':
+        return 1
+    else:
+        return int(card)
         
 
 def higher_card(card_one, card_two):
